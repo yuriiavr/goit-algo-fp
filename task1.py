@@ -63,3 +63,28 @@ def print_list(head):
         print(current.value, end=" -> ")
         current = current.next
     print("None")
+
+
+# Перевірка
+if __name__ == "__main__":
+    # Створення тестового списку
+    head = ListNode(4, ListNode(2, ListNode(1, ListNode(3))))
+    print("Початковий список:")
+    print_list(head)
+
+    # Перевірка реверсування
+    reversed_head = reverse_list(head)
+    print("Список після реверсування:")
+    print_list(reversed_head)
+
+    # Перевірка сортування
+    sorted_head = merge_sort_list(reversed_head)
+    print("Список після сортування:")
+    print_list(sorted_head)
+
+    # Перевірка об'єднання списків
+    list1 = ListNode(1, ListNode(3, ListNode(5)))
+    list2 = ListNode(2, ListNode(4, ListNode(6)))
+    merged_head = merge_sorted_lists(list1, list2)
+    print("Об'єднаний список:")
+    print_list(merged_head)
